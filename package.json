@@ -1,0 +1,32 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./server/bin/www",
+    "server": "nodemon ./server/bin/www",
+    "staging": "yarn build && NODE_ENV=staging nodemon ./server/bin/www",
+    "prod": "yarn build && NODE_ENV=production nodemon ./server/bin/www",
+    "client": "cd client && yarn start",
+    "build": "cd client && yarn build",
+    "commit": "git add . && git commit -m 'update features' &&git push",
+    "pre-d": " yarn build && git add . && git commit -m 'deployment' &&git push",
+    "analyze": "cd ./client && yarn analyze",
+    "client-i": "cd client && yarn install",
+    "i-all": "yarn client-i && yarn install"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "npm-run-all": "^4.1.2",
+    "cors": "^2.8.4"
+  },
+  "description": "this is my boilerplate user express + create-react-app + redux",
+  "main": "index.js",
+  "license": "MIT"
+}
