@@ -1,9 +1,14 @@
-import Biography from './biography'
+import TopBar from './topBar'
+import Map from './map'
 
 
 export const templateComponents = [
   {
-    name: 'Biography',
-    component: Biography
+    name: 'TopBar',
+    component: TopBar
+  },
+  {
+    name: 'Map',
+    component: Map
   }
 ];

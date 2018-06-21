@@ -11,12 +11,11 @@ import TemplateLoad from './Templates'
     const {pathname} = this.props.location
     const Section = data
       .field
-      .sort(sort_by('DESC', 'order'))
       .find(section => section.placement === pathname)
     console.log(Section)
       return (
       <Fragment>
-        {Section.map((section, n) => <Fragment key={n}>
+        {Section.field.sort(sort_by('DESC', 'order')).map((section, n) => <Fragment key={n}>
         <TemplateLoad  type={section.type||'biography'} data={section.option} Theme={Theme}/>
         </Fragment>)}
       </Fragment>

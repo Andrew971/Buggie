@@ -2,7 +2,7 @@
 export default {
     name: 'Naven',
     description: '',
-    type:'topbar',
+    type:'map',
     order:1,
     option: {
       logo: {
