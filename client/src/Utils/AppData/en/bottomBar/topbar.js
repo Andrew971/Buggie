@@ -2,8 +2,8 @@
 export default {
     name: 'Naven',
     description: '',
-    type:'map',
-    step:1,
+    placement:'/',
+    type:'bottombar',
     order:1,
     option: {
       logo: {

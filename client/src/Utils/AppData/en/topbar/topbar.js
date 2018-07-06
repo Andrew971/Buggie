@@ -1,7 +1,8 @@
 
 export default {
-    name: 'Naven',
+    name: 'location topbar bar',
     description: '',
+    placement:'/location',
     type:'topbar',
     order:1,
     option: {

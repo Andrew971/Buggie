@@ -1,10 +1,7 @@
-import topBar from './topbar'
 import Map from './map'
+import Address from './address'
 
 export default {
-    placement:'/',
-   field:[
-    topBar,
-    Map
-   ]
-  }
+    placement : '/location',
+    field : [Address, Map]
+}

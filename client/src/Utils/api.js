@@ -6,5 +6,9 @@ const setUrl = (REACT_APP_PROD_ENV === 'true')
 
 
 export const apiURL =(NODE_ENV ==='production')
-?setUrl+'ENDPOINT'
-:REACT_APP_DEV_API_URL+'ENDPOINT'
+?setUrl+'userLocation'
+:REACT_APP_DEV_API_URL
+
+export const apiUser =(NODE_ENV ==='production')
+?setUrl+'userLocation'
+:REACT_APP_DEV_API_URL+'user/'
