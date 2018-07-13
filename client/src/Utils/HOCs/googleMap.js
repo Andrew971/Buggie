@@ -24,10 +24,11 @@ class MyMapComponent extends Component {
   }
 
   componentDidMount = () => {
-   this.props.location && navigator
+  this.props.currentLocation && navigator
       .geolocation
       .getCurrentPosition((position) => {
         const {longitude, latitude} = position.coords
+        console.log(position)
         this.setState({
           center: {
             lat: latitude,
@@ -35,7 +36,8 @@ class MyMapComponent extends Component {
           }
         })
       });
-  }
+
+    }
 
   handleBoundsChange = () => {
     this.setState({

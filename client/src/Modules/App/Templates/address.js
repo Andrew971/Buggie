@@ -2,7 +2,7 @@ import React,{Fragment} from 'react'
 import Validation from '../../../Components/Validation'
 
 
- const Adress = (props) => {
+ const Address = (props) => {
 // console.log(props)
   return (
     <Fragment>
@@ -11,4 +11,4 @@ import Validation from '../../../Components/Validation'
 </Fragment>
   )
 };
-export default Adress
+export default Address

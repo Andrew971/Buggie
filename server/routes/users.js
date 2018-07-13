@@ -8,5 +8,17 @@ router.get('/', function(req, res, next) {
 
 router.post('/location', (req,res,next)=>{
   console.log(req.body)
+
+  setTimeout(()=>{
+    res.json({status:true})
+  },1000)
+})
+
+router.post('/places', (req,res,next)=>{
+  console.log(req.body)
+
+  setTimeout(()=>{
+    res.json({status:true,redirect:true})
+  },1000)
 })
 module.exports = router;

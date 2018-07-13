@@ -7,17 +7,34 @@ const initialState = {
     sharedContent: Data.sharedContent,
     targetLanguage: 'English',
     Theme: App['main'],
-    modalDisplay: false
+    modalDisplay: false,
+    status: false,
+    redirect: false,
+    store:[]
 }
 
 export function appReducer(state = initialState, action) {
     switch (action.type) {
-        case 'ACTION_REQUESTED':
+        
+        case 'LOCATION_CONFIRM_STATUS':
             return {
                 ...state,
-                state: action.payload
+                status: action.payload.status
             };
-
+        case 'PRE_FETCH_DATA_STATUS':
+        let {status,redirect} =action.payload
+            return {
+                ...state,
+                status: status,
+                redirect: redirect,
+            };
+        case 'PRE_FETCH_DATA':
+        let {fetched=status,storeData=[]} =action.payload
+        console.log(action.payload.status)
+            return {
+                ...state,
+                store: fetched?storeData:[]  
+            };
         default:
             return state;
     }

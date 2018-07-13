@@ -1,5 +1,2 @@
-export function locationAction(data) {
-  
-  return {type: data.type, payload: data.payload};
+export const locationAction=(data)=> {return{type: data.type, payload: data.payload}}
 
-}

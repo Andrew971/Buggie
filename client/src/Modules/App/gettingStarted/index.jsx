@@ -3,7 +3,7 @@ import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import TemplateLoad from '../Templates'
 
-class Home extends PureComponent {
+class GettingStarted extends PureComponent {
 
 
   getData = () => {
@@ -13,7 +13,6 @@ class Home extends PureComponent {
     const Section = data
       .field
       .find(base => base.placement === pathname)
-    console.log(Section)
     return Section || {}
   }
 
@@ -22,7 +21,8 @@ class Home extends PureComponent {
   render() {
     const {Theme} = this.props;
     const fetchedData = this.getData();
-
+    const {pathname} = this.props.location
+    console.log(pathname)
     return (
       <Fragment>
         <TemplateLoad
@@ -39,4 +39,4 @@ class Home extends PureComponent {
 const mapStateToProps = state => {
   return {Theme: state.App.Theme, data: state.App.appContent};
 };
-export default withRouter(connect(mapStateToProps)(Home));
+export default withRouter(connect(mapStateToProps)(GettingStarted));

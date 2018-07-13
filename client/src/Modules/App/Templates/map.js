@@ -18,7 +18,7 @@ const Map = (props) => {
         containerElement={< div style = {{ height: `84vh` }}/>}
         mapElement={< div style = {{ height: `100%` }}/>}
         getLocation={props.getLocation}
-        location={props.location}
+        currentLocation={props.currentLocation}
         />
       <BottomBar onClick={()=>props.validateLocation()} confirmed={props.isConfirmed}>
         testing components
